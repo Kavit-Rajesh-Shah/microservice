@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.qos.logback.classic.Level;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,10 +31,10 @@ public class MicroserviceApplication {
 		
 		strLength = name.length();
 		if(strLength == 5) 
-			logger.warn("User: " + name + " trying to use the greet service");
+			logger.info("User {} trying to use the greet service", name);
 		
 		if(strLength == 15) 
-			logger.warn("User: " + name + " trying to use the greet service with long name");
+			logger.info("User {} trying to use the greet service with long name", name);
 		
 		
 		return (LocalDateTime.now().getHour() < 12 ? "Good Morning " : "Have a nice day ahead ") 
