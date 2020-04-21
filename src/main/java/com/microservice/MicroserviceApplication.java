@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/helloworld")
@@ -28,10 +28,10 @@ public class MicroserviceApplication {
 	public String greet(@PathVariable String name) {
 		
 		strLength = name.length();
-		if(strLength = 5) 
+		if(strLength == 5) 
 			logger.warn("User: " + name + " trying to use the greet service");
 		
-		if(strLength = 15) 
+		if(strLength == 15) 
 			logger.warn("User: " + name + " trying to use the greet service with long name");
 		
 		
