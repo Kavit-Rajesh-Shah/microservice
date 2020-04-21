@@ -31,6 +31,10 @@ public class MicroserviceApplication {
 		if(strLength = 5) 
 			logger.warn("User: " + name + " trying to use the greet service");
 		
+		if(strLength = 15) 
+			logger.warn("User: " + name + " trying to use the greet service with long name");
+		
+		
 		return (LocalDateTime.now().getHour() < 12 ? "Good Morning " : "Have a nice day ahead ") 
 				+ name;
 	}
